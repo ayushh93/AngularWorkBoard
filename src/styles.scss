@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #dd0031; // Angular red
+  --secondary-color: #b3002d; // Darker red
+  --accent-color: #e0e0e0; // Light gray
+  --text-color: #333333; // Dark text
+  --background-color: #f8f9fa; // Light background
+  --hover-color: #f5f5f5; // Slight hover background for light areas
+  --border-color: #e0e0e0; // Border color for footer and other sections
+}
+
+// Global Body and Layout
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1f1f1;  // Light background for the overall page
+}
+
+html {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.content {
+  margin-left: 240px;  // Sidebar width offset
+  padding: 20px;
+  flex: 1;
+}
+
+.active-link {
+  font-weight: bold;
+}

@@ -1,0 +1,32 @@
+<!-- src/app/components/book-list/book-list.component.html -->
+
+<div class="book-list">
+    <h2>Book List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>SN</th>
+          <th>Name</th>
+          <th>Authors</th>
+          <th>Price (NPR)</th>
+          <th>Price (INR)</th>
+          <th>Publication</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books; index as i">
+          <td>{{i + 1}}</td>
+          <td>{{ book.name }}</td>
+          <td>{{ book.authors.join(', ') }}</td>
+          <td>{{ book.priceForNepal }}</td>
+          <td>{{ book.priceForIndia }}</td>
+          <td>{{ book.publication }}</td>
+          <td>
+            <button (click)="ViewDetails(book.id)">View</button>
+            <button (click)="EditBook(book.id)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

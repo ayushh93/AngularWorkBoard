@@ -1,0 +1,85 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0; // Reset padding
+    z-index: 100;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 10px 20px; // Add spacing
+      border-bottom: 1px solid var(--border-color); // Proper alignment for border
+      box-sizing: border-box; // Ensure border doesn't stretch
+      margin-bottom: 10px;
+    }
+  
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+  
+    .logo-text {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+  
+    ul li {
+      width: 100%;
+    }
+  
+    ul li a {
+      display: block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: var(--text-color);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+  
+    ul li a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: var(--primary-color);
+      transition: all 0.3s ease;
+      z-index: -1;
+    }
+  
+    ul li a:hover::before {
+      left: 0;
+    }
+  
+    ul li a:hover {
+      color: white;
+    }
+  
+    .active-link {
+      color: var(--secondary-color) !important;
+    }
+  }

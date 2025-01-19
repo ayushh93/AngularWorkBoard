@@ -1,0 +1,24 @@
+<div class="book-detail">
+    <h2>Book details</h2>
+    <div class="detail-item">
+        <strong>Name:</strong>
+        <span>{{ book?.name}}</span>
+      </div>
+    <div class="detail-item">
+      <strong>Authors:</strong>
+      <span>{{ book?.authors?.join(', ') }}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Price (NPR):</strong>
+      <span>{{ book?.priceForNepal | currency: 'NPR' }}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Price (INR):</strong>
+      <span>{{ book?.priceForIndia | currency: 'INR' }}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Publication:</strong>
+      <span>{{ book?.publication || 'N/A' }}</span>
+    </div>
+    <button class="back-button" [routerLink]="'/books'">Back to List</button>
+  </div>

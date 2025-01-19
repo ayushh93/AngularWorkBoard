@@ -1,0 +1,25 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 240px; // Sidebar width
+    height: 60px;
+    width: calc(100% - 240px); // Adjust width dynamically
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 101;
+    box-sizing: border-box; // Prevent any overflow due to padding
+  
+    .navbar-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  
+    .navbar-right {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+  }

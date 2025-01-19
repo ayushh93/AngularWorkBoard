@@ -1,0 +1,18 @@
+:host {
+    display: block;
+    padding-top: 60px; // Navbar height
+    padding-bottom: 50px; // Footer height
+  }
+  
+  .main-content {
+    margin-left: 240px; // Same as the sidebar width
+    padding: 20px;  // Optional: If you want some padding around the content
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  router-outlet {
+    display: block;
+  }
