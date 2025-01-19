@@ -1,0 +1,74 @@
+<div class="form-container">
+    <div class="header">
+        <h2>{{isEditMode ? 'Edit Book' : 'Create Book'}}</h2>
+        </div>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="book-form">
+    <!-- Do not display the id field to the user, but it's still part of the form -->
+    <input type="hidden" formControlName="id">
+    <!-- Book Name -->
+    <div class="form-group">
+        <label for="name">Book Name</label>
+        <input type="text" id="name" formControlName="name" placeholder="Enter book name" />
+        <div *ngIf="bookForm.get('name')?.invalid && (bookForm.get('name')?.touched || bookForm.get('name')?.dirty)">
+            <span class="error-message">* Book name is required.</span>
+        </div>
+    </div>
+
+    <!-- Authors -->
+    <div class="form-group">
+        <label>Authors
+            <button type="button" class="add-author" (click)="addAuthor()">
+                <img src="icons/plus-icon.svg" alt="Add author" width="15px" height="15px" />
+            </button>
+        </label>
+        <div formArrayName="authors">
+            <div *ngFor="let author of authors.controls; let i = index" class="author-input-group">
+                <input type="text" [formControlName]="i" placeholder="Enter author name" />
+                <button type="button" class="remove-author" (click)="removeAuthor(i)">
+                    <img src="icons/cross-icon.svg" alt="Remove author" width="15px" height="15px" />
+                </button>
+                 <!-- Show validation message for the individual author input -->
+                 <div *ngIf="author.invalid && (author.touched || author.dirty)">
+                    <span class="error-message">* Author name is required.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Price For Nepal -->
+    <div class="form-group">
+        <label for="priceForNepal">Price (NPR)</label>
+        <input type="number" id="priceForNepal" formControlName="priceForNepal" placeholder="Enter price for Nepal" />
+        <div
+            *ngIf="bookForm.get('priceForNepal')?.invalid && (bookForm.get('priceForNepal')?.touched || bookForm.get('priceForNepal')?.dirty)">
+            <span class="error-message">* Please enter a valid price.</span>
+        </div>
+    </div>
+
+    <!-- Price For India -->
+    <div class="form-group">
+        <label for="priceForIndia">Price (INR)</label>
+        <input type="number" id="priceForIndia" formControlName="priceForIndia" placeholder="Enter price for India" />
+        <div
+            *ngIf="bookForm.get('priceForIndia')?.invalid && (bookForm.get('priceForIndia')?.touched || bookForm.get('priceForIndia')?.dirty)">
+            <span class="error-message">* Please enter a valid price.</span>
+        </div>
+    </div>
+
+    <!-- Publication -->
+    <div class="form-group">
+        <label for="publication">Publication</label>
+        <input type="text" id="publication" formControlName="publication" placeholder="Enter publication" />
+        <div
+            *ngIf="bookForm.get('publication')?.invalid && (bookForm.get('publication')?.touched || bookForm.get('publication')?.dirty)">
+            <span class="error-message">* Publication is required.</span>
+        </div>
+    </div>
+
+    <!-- Submit and Back -->
+    <div class="form-actions">
+        <button type="submit" class="btn submit-btn">Submit</button>
+        <button type="button" (click)="goBack()" class="btn back-btn">Go Back</button>
+    </div>
+</form>
+</div>

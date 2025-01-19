@@ -1,0 +1,93 @@
+.book-form {
+    margin: 0 auto;
+    padding-right: 20px; /* Right padding for the form */
+  }
+  .header {
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 24px;
+      color: var(--primary-color);
+    }
+}
+  .form-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    display: block;
+  }
+  
+  .author-input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .author-input-group input {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .add-author, .remove-author {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .add-author img, .remove-author img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #ccc;
+  }
+  
+  .back-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }

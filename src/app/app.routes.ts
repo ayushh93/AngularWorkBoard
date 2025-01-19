@@ -10,12 +10,23 @@ export const routes: Routes = [
     { path: '', component: DashboardComponent },
     {
         path: 'books',
-        loadComponent: () => import('./Books/book-list/book-list.component').then(c => c.BookListComponent)
+        loadComponent: () => 
+            import('./Books/book-list/book-list.component').then((c) => c.BookListComponent),
+    },
+    {
+        path: 'books/add',
+        loadComponent: () => 
+            import('./Books/book-form/book-form.component').then((c) => c.BookFormComponent),
+    },
+    {
+        path: 'books/edit/:id',
+        loadComponent: () => 
+            import('./Books/book-form/book-form.component').then((c) => c.BookFormComponent),
     },
     {
         path: 'books/:id',
-        loadComponent: () => import('./Books/book-detail/book-detail.component').then(c => c.BookDetailComponent)
+        loadComponent: () => 
+            import('./Books/book-detail/book-detail.component').then((c) => c.BookDetailComponent),
     },
     { path: '**', redirectTo: '/404' }, // Wildcard route to handle all unknown routes
-
 ];
