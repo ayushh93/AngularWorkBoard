@@ -28,5 +28,16 @@ export const routes: Routes = [
         loadComponent: () => 
             import('./Books/book-detail/book-detail.component').then((c) => c.BookDetailComponent),
     },
-    { path: '**', redirectTo: '/404' }, // Wildcard route to handle all unknown routes
+    {
+        path: 'to-dos',
+        loadComponent: () =>
+            import('./ToDo/to-do-index/to-do-index.component').then((x) => x.ToDoIndexComponent)
+    },
+    {
+        path:'to-dos/:id',
+        loadComponent:() =>
+            import('./ToDo/to-do-detail/to-do-detail.component').then((x) => x.ToDoDetailComponent)
+    },
+    // Wildcard route to handle all unknown routes
+    { path: '**', redirectTo: '/404' }, 
 ];

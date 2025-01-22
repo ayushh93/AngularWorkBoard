@@ -1,0 +1,31 @@
+<div class="book-list">
+    <div class="header">
+      <h2>To Do List</h2>
+      <button class="add-book-btn" [routerLink]="'/to-dos/add'">Add To Do's</button>
+    </div>
+      <table>
+        <thead>
+          <tr>
+            <th>SN</th>
+            <th>Todos</th>
+            <th>Is Completed</th>
+            <th>User Id</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let toDo of todos; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{toDo.todo}}</td>
+            <td [ngClass]="{'text-green': toDo.completed, 'text-red': !toDo.completed}">
+                {{toDo.completed ? 'Yes' : 'No'}}
+              </td>
+            <td>{{toDo.userId}}</td>
+            <td>
+              <button (click)="ViewDetails(toDo.id)">View</button>
+              <button (click)="Edit(toDo.id)">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

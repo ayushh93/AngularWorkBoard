@@ -1,0 +1,18 @@
+<div class="book-detail">
+    <h2>Todo details</h2>
+    <div class="detail-item">
+        <strong>To Do:</strong>
+        <span>{{ toDo?.todo}}</span>
+      </div>
+    <div class="detail-item">
+      <strong>Is Completed:</strong>
+      <span [ngClass]="{'text-green': toDo?.completed, 'text-red': !toDo?.completed}">
+        {{ toDo?.completed ? 'Yes' : 'No'}}
+    </span>
+    </div>
+    <div class="detail-item">
+      <strong>User Id</strong>
+      <span>{{ toDo?.userId}}</span>
+    </div>
+    <button class="back-button" [routerLink]="'/to-dos'">Back to List</button>
+  </div>

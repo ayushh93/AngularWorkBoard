@@ -88,7 +88,6 @@ export class BookFormComponent implements OnInit {
 
   // Submit form
   onSubmit(): void {
-    
     if (this.bookForm.valid) {
       const bookData: Book = this.bookForm.value;
       if (this.isEditMode && this.bookId) {

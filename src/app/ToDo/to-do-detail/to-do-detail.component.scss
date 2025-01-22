@@ -1,0 +1,53 @@
+.book-detail {
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .detail-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: baseline;
+  
+    strong {
+      width: 150px; // Consistent alignment for labels
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+  
+    span {
+      color: var(--text-color);
+    }
+  }
+  
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: var(--secondary-color);
+  }
+  .text-green {
+    color: green !important;
+  }
+  
+  .text-red {
+    color: red !important;
+  }
+  

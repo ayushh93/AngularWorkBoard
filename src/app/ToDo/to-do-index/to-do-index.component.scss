@@ -1,0 +1,68 @@
+.book-list {
+    margin: 20px;
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  
+      h2 {
+        font-size: 24px;
+        color: var(--primary-color);
+      }
+  
+      .add-book-btn {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: var(--secondary-color);
+        }
+      }
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    th {
+      background-color: #f8f9fa;
+    }
+  
+    button {
+      background-color: var(--primary-color) !important;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-right: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: var(--secondary-color) !important;
+      }
+    }
+    .text-green {
+      color: green;
+    }
+    
+    .text-red {
+      color: red;
+    }
+    
+  }
